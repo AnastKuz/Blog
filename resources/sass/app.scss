@@ -1,8 +1,36 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    font-size: 1.125rem;
+}
+header {
+    height: 215px;
+    background-color: white;
+}
+h1 {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 80px;
+    line-height: 1;
+    font-family: Roboto, sans-serif;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.navbar-toggler, .navbar-light {
+    border: none;
+}
+button:focus {
+    outline: 3px groove orangeRed;
+}
+.card-header {
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+}

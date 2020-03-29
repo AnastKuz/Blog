@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    @foreach($posts as $post)
+
     <div class="card my-5">
         <div class="card-header">
             <h2>{{$post->title}}</h2>
@@ -20,6 +20,6 @@
             </div>
         </div>
     </div>
-    @endforeach
+
 </div>
 @endsection

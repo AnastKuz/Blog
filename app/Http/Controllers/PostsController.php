@@ -25,7 +25,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.create');
     }
 
     /**
@@ -36,7 +36,20 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title'=>'required',
+            'photo'=>'required',
+            'body'=>'required'
+        ]);
+
+        $post = new Post([
+            'title' => $request->get('title'),
+            'photo' => $request->get('photo'),
+            'body' => $request->get('body'),
+        ]);
+
+        $post->save();
+        return redirect('/posts')->with('success', 'Post added!');
     }
 
     /**

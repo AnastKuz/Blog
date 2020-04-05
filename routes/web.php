@@ -21,4 +21,5 @@ Route::get('/about', 'PagesController@about')->name('about');
 Route::resource('posts', 'PostsController')->names([
     'index'=>'home',
     'show'=>'posts.show',
+    'create'=>'pages.create',
 ]);

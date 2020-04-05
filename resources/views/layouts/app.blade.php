@@ -91,7 +91,7 @@
                         <a class="nav-link" href="{{ url('/about') }}">About</a>
                     </li>
                     <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">New Post</a>
+                        <a class="nav-link" href="{{ route('pages.create') }}">New Post</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacts</a>

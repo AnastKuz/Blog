@@ -8,4 +8,8 @@ class Post extends Model
 {
     //relationships between post and user
     protected $table = 'posts';
+
+    protected $fillable = [
+        'title', 'body', 'photo'
+    ];
 }

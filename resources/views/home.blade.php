@@ -3,6 +3,11 @@
 @section('content')
 
     <div class="container">
+            @if(session()->get('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
             @foreach($posts as $post)
                 <div class="card my-5">
                     <div class="card-header">

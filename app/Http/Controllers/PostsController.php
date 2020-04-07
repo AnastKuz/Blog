@@ -75,7 +75,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.edit')->with('post', $post);
     }
 
     /**
@@ -87,7 +88,20 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title'=>'required',
+            'photo'=>'required',
+            'body'=>'required'
+        ]);
+
+        $post = Post::find($id);
+        $post->title = $request->get('title');
+        $post->photo = $request->get('photo');
+        $post->body = $request->get('body');
+
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Post edited!');
     }
 
     /**

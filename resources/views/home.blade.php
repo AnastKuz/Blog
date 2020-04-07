@@ -17,11 +17,6 @@
                             </div>
                             <div class="card-body d-flex">
                                 <p>Written on <small>{{$post->created_at}}</small></p>
-                                <form action="{{ route('posts.destroy', $post) }}" method="POST" class="ml-auto">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-dark">Delete</button>
-                                </form>
                             </div>
                         </div>
                     </div>

@@ -18,6 +18,20 @@
                     <img src="{{$post->photo}}" alt="image">
                 </div>
             </div>
+            <div class="row mt-4">
+                <div class="col-1 d-flex">
+                    <div class="mr-1">
+                        <a href="{{ route('posts.edit', $post) }}" class="btn btn-dark">Edit</a>
+                    </div>
+                    <div>
+                        <form action="{{ route('posts.destroy', $post) }}" method="POST" class="ml-auto">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-dark">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
